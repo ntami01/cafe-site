@@ -344,3 +344,105 @@ img{max-width:100%;vertical-align:middle}
   .menu-tab{font-size:12px;padding-inline:5px}
   .line-button,.outline-button{min-width:0;width:100%;max-width:260px}
 }
+
+/* 2026-07-29: targeted smartphone text clipping fix only */
+@media (max-width: 600px) {
+  #about,
+  #coffee,
+  #tea,
+  #seasonal {
+    min-width: 0;
+    overflow: visible;
+  }
+
+  #about .about-copy,
+  #coffee .feature-split-copy,
+  #tea .feature-split-copy,
+  #seasonal .section-heading,
+  #seasonal .seasonal-split-copy {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  #about .about-copy h1,
+  #coffee .feature-split-copy h2,
+  #tea .feature-split-copy h2,
+  #seasonal .section-heading h2 {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    text-wrap: pretty;
+    letter-spacing: .025em;
+  }
+
+  #about .about-copy h1 {
+    font-size: clamp(27px, 8.2vw, 35px);
+    line-height: 1.5;
+  }
+
+  #coffee .feature-split-copy h2,
+  #tea .feature-split-copy h2 {
+    font-size: clamp(28px, 8.4vw, 36px);
+    line-height: 1.5;
+  }
+
+  #seasonal .section-heading h2 {
+    font-size: clamp(27px, 8vw, 35px);
+    line-height: 1.5;
+  }
+
+  #about .about-copy p,
+  #coffee .feature-split-copy p,
+  #tea .feature-split-copy p,
+  #seasonal .seasonal-split-copy p {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+  }
+
+  #coffee .feature-split-copy,
+  #tea .feature-split-copy {
+    padding: 44px 24px 54px;
+  }
+
+  #coffee .outline-button,
+  #tea .outline-button {
+    width: min(100%, 260px);
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  #about .about-image,
+  #coffee .feature-split-image,
+  #tea .feature-split-image {
+    min-width: 0;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 360px) {
+  #about .about-copy h1,
+  #coffee .feature-split-copy h2,
+  #tea .feature-split-copy h2,
+  #seasonal .section-heading h2 {
+    letter-spacing: .015em;
+  }
+
+  #coffee .feature-split-copy,
+  #tea .feature-split-copy,
+  #seasonal .seasonal-split-copy {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
