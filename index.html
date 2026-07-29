@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="焼きたてのパイと丁寧に淹れたコーヒーを楽しむ、架空のカフェ HEARTH PIE & COFFEE。">
+  <title>HEARTH PIE & COFFEE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+JP:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div><span>HEARTH</span><small>PIE & COFFEE</small></div></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="トップへ">
+      <span class="brand-mark">⌂</span>
+      <span><b>HEARTH</b><small>PIE & COFFEE</small></span>
+    </a>
+    <button class="menu-toggle" aria-controls="global-nav" aria-expanded="false"><span></span><span></span></button>
+    <nav id="global-nav">
+      <a href="#about">ABOUT</a><a href="#menu">MENU</a><a href="#coffee">COFFEE</a><a href="#tea">TEA</a><a href="#seasonal">SEASONAL</a><a href="#reservation">RESERVATION</a><a href="#recruit">RECRUIT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media" data-parallax="0.16"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <p class="hero-jp split-lines">パイとコーヒーで、<br>心を満たす。</p>
+        <p class="hero-en reveal-up">Pie & Coffee to warm your heart.</p>
+        <a class="line-button reveal-up" href="#menu"><span>VIEW MENU</span><i>→</i></a>
+      </div>
+      <p class="scroll-label">SCROLL <span></span></p>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-copy reveal-up">
+        <p class="kicker">ABOUT</p>
+        <h1>焼きたての香りと、ゆっくり流れる時間。</h1>
+        <p>HEARTHは、毎日店内で一つずつ丁寧に焼き上げるパイと、香り豊かなコーヒーを楽しむ小さなカフェです。</p>
+        <p>季節の果実を使った甘いパイから、ランチに合うセイボリーパイまで。心ほどける一皿をご用意しています。</p>
+        <a class="outline-button" href="#access"><span>ABOUT US</span><i>→</i></a>
+      </div>
+      <figure class="about-image reveal-mask"><img src="assets/cafe-exterior.jpg" alt="緑に囲まれた架空のカフェHEARTHの外観"></figure>
+    </section>
+
+    <section class="menu-intro" id="menu">
+      <div class="menu-bg" data-parallax="0.1"></div>
+      <div class="menu-intro-inner reveal-up">
+        <p class="kicker light">MENU</p>
+        <h2>焼きたてのパイと、<br>こだわりのドリンク。</h2>
+        <p>素材の組み合わせと焼き加減を大切にした、HEARTHのメニュー。</p>
+      </div>
+    </section>
+
+    <section class="menu-section section">
+      <div class="section-heading center reveal-up">
+        <p class="kicker">PIE MENU</p>
+        <h2>今日の気分に合わせて。</h2>
+      </div>
+      <div class="menu-tabs reveal-up" role="tablist">
+        <button class="menu-tab active" data-tab="pie">PIE</button>
+        <button class="menu-tab" data-tab="drink">DRINK</button>
+        <button class="menu-tab" data-tab="season">SEASONAL</button>
+      </div>
+
+      <div class="menu-panel active" data-panel="pie">
+        <div class="menu-list">
+          <article class="menu-row reveal-up"><div class="menu-photo"><img src="assets/apple-pie.jpg" alt="焼き上がったホールのアップルパイ"></div><div class="menu-detail"><div><h3>アップルパイ</h3><small>Apple Pie</small></div><p>じっくり煮込んだりんごと、香ばしいパイ生地。定番のアップルパイ。</p><strong>¥680</strong></div></article>
+          <article class="menu-row reveal-up"><div class="menu-photo"><img src="assets/lemon-cream-pie.jpg" alt="レモンクリームパイ"></div><div class="menu-detail"><div><h3>レモンクリームパイ</h3><small>Lemon Cream Pie</small></div><p>爽やかなレモンクリームと、ふんわり軽いメレンゲの組み合わせ。</p><strong>¥680</strong></div></article>
+          <article class="menu-row reveal-up"><div class="menu-photo"><img src="assets/quiche-salad.jpg" alt="サラダを添えた焼きたてのキッシュ"></div><div class="menu-detail"><div><h3>キッシュ</h3><small>Quiche</small></div><p>ベーコン、玉ねぎ、チーズを使った具だくさんのキッシュ。サラダ付き。</p><strong>¥780</strong></div></article>
+          <article class="menu-row reveal-up"><div class="menu-photo"><img src="assets/beef-onion-pie.jpg" alt="サラダを添えたビーフオニオンパイ"></div><div class="menu-detail"><div><h3>ビーフオニオンパイ</h3><small>Beef Onion Pie</small></div><p>じっくり炒めた玉ねぎと牛肉をパイで包んだ、コク深い味わい。</p><strong>¥780</strong></div></article>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="drink">
+        <div class="drink-list">
+          <p><span>ブレンドコーヒー <small>HOT</small></span><strong>¥550</strong></p><p><span>アイスコーヒー</span><strong>¥550</strong></p><p><span>カフェラテ <small>HOT / ICED</small></span><strong>¥600</strong></p><p><span>ソイラテ <small>HOT / ICED</small></span><strong>¥620</strong></p><p><span>キャラメルラテ <small>HOT / ICED</small></span><strong>¥650</strong></p><p><span>カフェモカ <small>HOT / ICED</small></span><strong>¥650</strong></p>
+          <div class="drink-category"><h3>HOT TEA</h3><p><span>アールグレイ <small>Earl Grey</small></span><strong>¥580</strong></p><p><span>ダージリン <small>Darjeeling</small></span><strong>¥600</strong></p><p><span>アッサム <small>Assam</small></span><strong>¥580</strong></p></div>
+          <div class="drink-category"><h3>FLAVORED TEA</h3><p><span>ピーチティー <small>Peach Tea</small></span><strong>¥620</strong></p><p><span>アップルティー <small>Apple Tea</small></span><strong>¥620</strong></p></div>
+          <div class="drink-category"><h3>HERBAL TEA</h3><p><span>カモミール <small>Chamomile</small></span><strong>¥620</strong></p><p><span>ルイボス <small>Rooibos</small></span><strong>¥600</strong></p></div>
+          <div class="drink-category"><h3>ICED TEA</h3><p><span>アイスアールグレイ <small>Iced Earl Grey</small></span><strong>¥600</strong></p><p><span>アイスピーチティー <small>Iced Peach Tea</small></span><strong>¥630</strong></p></div>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="season">
+        <div class="season-card reveal-up"><figure><img src="assets/peach.png" alt="桃をたっぷり使った季節限定のピーチパイ"></figure><div><p class="kicker">SUMMER LIMITED</p><h3>Peach & Earl Grey Pie</h3><p>白桃とアールグレイ香るクリームを合わせた、夏限定のパイ。</p><strong>¥860</strong></div></div>
+      </div>
+    </section>
+
+    <section class="feature-split feature-coffee section-boundary" id="coffee">
+      <figure class="feature-split-image reveal-mask">
+        <img src="assets/coffee.png" alt="コーヒー豆とラテアートを添えたカフェラテ">
+      </figure>
+      <div class="feature-split-copy reveal-up">
+        <p class="kicker">COFFEE</p>
+        <h2>深煎りのコクと、華やかな余韻。</h2>
+        <p>ブラジルの甘さ、ケニアの果実味、エチオピアの香り。パイと相性のよい深煎りのブレンドです。</p>
+        <a class="outline-button" href="#menu" data-open-tab="drink"><span>VIEW DRINK MENU</span><i>→</i></a>
+      </div>
+    </section>
+
+    <section class="feature-split feature-tea section-boundary" id="tea">
+      <figure class="feature-split-image reveal-mask">
+        <img src="assets/tea.png" alt="ガラスのティーポットと温かい紅茶">
+      </figure>
+      <div class="feature-split-copy reveal-up">
+        <p class="kicker">TEA</p>
+        <h2>香りまで味わう、丁寧な一杯。</h2>
+        <p>香り豊かな茶葉から、パイに寄り添う紅茶を厳選。ゆっくりとほどける時間をお楽しみください。</p>
+        <a class="outline-button" href="#menu" data-open-tab="drink"><span>VIEW DRINK MENU</span><i>→</i></a>
+      </div>
+    </section>
+
+    <section class="seasonal section section-boundary" id="seasonal">
+      <div class="section-heading reveal-up"><p class="kicker">SEASONAL</p><h2>季節を包んだ、その時だけのパイ。</h2></div>
+      <div class="seasonal-split">
+        <figure class="seasonal-split-image reveal-mask">
+          <img src="assets/peach.png" alt="焼き上がった桃とアールグレイの季節限定パイ">
+        </figure>
+        <div class="seasonal-split-copy reveal-up"><small>SUMMER 2026</small><h3>Peach & Earl Grey</h3><p>みずみずしい桃と、アールグレイの上品な香り。冷たいアイスティーと一緒にどうぞ。</p><strong>¥860</strong></div>
+      </div>
+    </section>
+
+    <section class="reservation section" id="reservation">
+      <div class="section-heading center reveal-up"><p class="kicker">RESERVATION</p><h2>ご予約・お問い合わせ</h2><p>Instagramまたはお電話にて承っております。</p></div>
+      <div class="reservation-links">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="contact-card reveal-up"><span class="contact-icon">◎</span><small>Instagramから予約</small><strong>@hearth.piecoffee</strong><i>Instagramを開く →</i></a>
+        <a href="tel:0312345678" class="contact-card reveal-up"><span class="contact-icon">☎</span><small>電話で予約</small><strong>03-1234-5678</strong><i>電話をかける →</i></a>
+      </div>
+      <p class="demo-note">※店舗名・住所・電話番号・アカウントはポートフォリオ用の架空情報です。</p>
+    </section>
+
+    <section class="access" id="access">
+      <div class="access-copy reveal-up"><p class="kicker light">ACCESS</p><h2>HEARTH<br><small>PIE & COFFEE</small></h2><address>〒150-0001<br>東京都渋谷区神宮前2-33-4<br>風静ビル 1F</address><dl><div><dt>OPEN</dt><dd>11:00 – 19:00<br>(L.O. 18:30)</dd></div><div><dt>CLOSED</dt><dd>火曜日</dd></div><div><dt>ACCESS</dt><dd>明治神宮前駅より徒歩6分</dd></div></dl></div>
+      <div class="access-photo" data-parallax="0.08"></div>
+    </section>
+
+    <section class="recruit section" id="recruit"><div class="section-heading reveal-up"><p class="kicker">RECRUIT</p><h2>一緒に、心ほどける<br>時間をつくりませんか。</h2></div><a class="outline-button reveal-up" href="recruit.html"><span>VIEW RECRUIT</span><i>→</i></a></section>
+  </main>
+
+  <footer><div class="footer-brand"><span class="brand-mark">⌂</span><span><b>HEARTH</b><small>PIE & COFFEE</small></span></div><div><p>ADDRESS</p><span>東京都渋谷区神宮前2-33-4<br>風静ビル 1F</span></div><div><p>OPENING HOURS</p><span>11:00 – 19:00<br>定休日：火曜日</span></div><div><p>FOLLOW US</p><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a></div><small class="copyright">© HEARTH PIE & COFFEE</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
