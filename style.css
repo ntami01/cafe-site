@@ -244,3 +244,103 @@ p{word-break:normal;overflow-wrap:break-word;text-wrap:pretty}
   .seasonal-split-image{aspect-ratio:4/3;padding:0}
   .feature-split-copy{padding:44px 24px 54px}
 }
+
+
+/* 2026-07-29: GitHub Pages path safety and responsive-only maintenance */
+html{max-width:100%;overflow-x:clip}
+body{max-width:100%;overflow-x:clip}
+main,section,header,footer{max-width:100%}
+img{max-width:100%;vertical-align:middle}
+.menu-toggle{color:inherit;cursor:pointer}
+
+@media(max-width:900px){
+  body.nav-open{overflow:hidden}
+  .site-header{padding-inline:24px}
+  .site-header nav{padding:96px 24px 40px;overflow-y:auto;overscroll-behavior:contain}
+  .site-header nav a{display:flex;align-items:center;justify-content:center;min-height:48px;width:min(320px,100%);font-size:clamp(20px,5vw,28px)}
+  .menu-toggle{flex:0 0 40px;width:40px;height:40px;padding:0}
+  .menu-toggle span{left:4px;width:32px}
+
+  .hero{min-height:720px}
+  .hero-media{inset:-4%;background-position:center}
+  .hero-copy{max-width:min(620px,calc(100% - 48px))}
+
+  .about.section{gap:48px}
+  .about-copy{width:min(100%,620px)}
+  .about-image{width:100%;height:auto;aspect-ratio:4/3;background:var(--ivory)}
+  .about-image img{object-fit:contain;background:var(--ivory)}
+
+  .menu-list{width:100%}
+  .menu-row{min-width:0}
+  .menu-detail>*{min-width:0}
+
+  .feature-split,.seasonal-split{width:calc(100% - 48px);max-width:760px}
+  .feature-split-image,.seasonal-split-image{width:100%;height:auto;aspect-ratio:4/3}
+  .feature-split-image img,.seasonal-split-image img{object-fit:contain}
+
+  .access{grid-template-columns:1fr}
+  .access-photo{min-height:420px;background-position:center}
+  footer{gap:32px}
+}
+
+@media(max-width:600px){
+  .site-header{padding-inline:18px}
+  .brand{min-width:0}
+  .brand b{font-size:16px}
+  .brand small{letter-spacing:.18em}
+
+  .hero{min-height:640px}
+  .hero-copy{margin-inline:22px;max-width:calc(100% - 44px)}
+  .hero-jp{word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
+  .hero-en{line-height:1.6}
+
+  .section{padding-left:22px;padding-right:22px}
+  p,h1,h2,h3,address,dt,dd,span,strong,small{overflow-wrap:anywhere}
+  p{word-break:normal;text-wrap:pretty}
+
+  .about.section{gap:36px}
+  .about-image{aspect-ratio:4/3}
+
+  .menu-tabs{width:100%;gap:14px;justify-content:space-between;overflow:visible}
+  .menu-tab{min-height:44px;padding:12px 8px;font-size:13px;white-space:nowrap}
+  .menu-row{grid-template-columns:1fr;gap:14px;padding:20px 0}
+  .menu-photo{height:auto;aspect-ratio:4/3}
+  .menu-photo img{object-fit:cover}
+  .menu-detail{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;align-items:start}
+  .menu-detail>div{min-width:0}
+  .menu-detail p{grid-column:1/-1;margin-top:2px;font-size:12px;line-height:1.75}
+  .menu-detail strong{grid-column:2;grid-row:1;align-self:end;margin:0;white-space:nowrap}
+  .drink-list p{gap:16px;padding:16px 4px;font-size:12px;align-items:flex-start}
+  .drink-list p span{min-width:0}
+  .drink-list p strong{flex:0 0 auto;white-space:nowrap}
+
+  .feature-split,.seasonal-split{width:calc(100% - 44px);margin-left:auto;margin-right:auto}
+  .feature-split-copy,.seasonal-split-copy{padding-left:24px;padding-right:24px}
+  .feature-split-copy .outline-button,.seasonal-split-copy .outline-button,.recruit .outline-button{min-height:48px}
+
+  .reservation-links{gap:14px}
+  .contact-card{width:100%;min-height:190px;padding:28px 20px}
+  .contact-card strong{font-size:18px;overflow-wrap:anywhere;text-align:center}
+
+  .access-copy{padding-left:22px;padding-right:22px}
+  .access-copy dl div{grid-template-columns:78px minmax(0,1fr);gap:12px}
+  .access-photo{min-height:320px}
+
+  .recruit-page{padding-top:88px}
+  .recruit-grid{gap:18px}
+  .recruit-card{min-width:0}
+  .recruit-apply .outline-button{display:flex;width:100%;margin-right:0}
+
+  footer{grid-template-columns:1fr;gap:28px;padding-left:22px;padding-right:22px}
+}
+
+@media(max-width:360px){
+  .site-header{padding-inline:14px}
+  .brand b{font-size:15px}
+  .brand-mark{font-size:21px}
+  .hero-copy{margin-inline:18px;max-width:calc(100% - 36px)}
+  .section{padding-left:18px;padding-right:18px}
+  .feature-split,.seasonal-split{width:calc(100% - 36px)}
+  .menu-tab{font-size:12px;padding-inline:5px}
+  .line-button,.outline-button{min-width:0;width:100%;max-width:260px}
+}

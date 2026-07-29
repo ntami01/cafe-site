@@ -1,6 +1,8 @@
-# HEARTH PIE & COFFEE — Photo Update
+# HEARTH PIE & COFFEE — Responsive / GitHub Pages build
 
-COFFEE・TEA・SEASONALの3画像を、ユーザー提供の4:3高解像度PNGへ差し替えました。
-写真は再圧縮せず、そのまま収録しています。
-写真周辺のみ、左右の余白・4:3表示・レスポンシブ表示を調整しています。
-その他の配色、フォント、文章、ボタン、アニメーション、セクション順は変更していません。
+`index.html` をリポジトリ直下に置き、`assets`、`style.css`、`script.js`、`recruit.html` と一緒に公開してください。
+
+- 画像参照は `assets/...` の相対パスに統一
+- `.nojekyll` を同梱
+- 320 / 375 / 390 / 414 / 768px 向けレスポンシブ調整
+- スマートフォン用ハンバーガーメニュー対応

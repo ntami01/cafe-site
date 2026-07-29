@@ -3,8 +3,20 @@ window.addEventListener('load',()=>{setTimeout(()=>{document.querySelector('.loa
 const header=document.querySelector('.site-header');
 addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>40),{passive:true});
 const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('#global-nav');
-toggle.addEventListener('click',()=>{const open=toggle.classList.toggle('open');nav.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open))});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.classList.remove('open');nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
+function setMenu(open){
+  if(!toggle||!nav)return;
+  toggle.classList.toggle('open',open);
+  nav.classList.toggle('open',open);
+  body.classList.toggle('nav-open',open);
+  toggle.setAttribute('aria-expanded',String(open));
+  toggle.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');
+}
+if(toggle&&nav){
+  toggle.addEventListener('click',()=>setMenu(!nav.classList.contains('open')));
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+  addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+  addEventListener('resize',()=>{if(innerWidth>900)setMenu(false)},{passive:true});
+}
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');if(entry.target.classList.contains('story'))entry.target.classList.add('in-view');observer.unobserve(entry.target)}}),{threshold:.14});
 document.querySelectorAll('.reveal-up,.reveal-mask,.story').forEach(el=>observer.observe(el));
 setTimeout(()=>document.querySelectorAll('.reveal-mask').forEach(el=>el.classList.add('visible')),1400);
